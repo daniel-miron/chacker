@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Ch4k3r</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        header {
+            background-color: black;
+            color: green;
+            font-weight: bolder;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <pre>
+                _       ___ _    _____      
+                | |     /   | |  |____ |     
+             ___| |__  / /| | | __   / /_ __ 
+            / __| '_ \/ /_| | |/ /   \ \ '__|
+           | (__| | | \___  |   <.___/ / |   
+            \___|_| |_|   |_/_|\_\____/|_|   
+                                           
+        </pre>
+    </header>
+    <div id='app'>
+        <div id="teamA">
+            <h2>teamA</h2>
+            <div class="totalKeys">
+                <label>Total Keys</label>
+                <span>0</span>
+            </div>
+            <div class="ckpm">
+                <label>current kpm</label>
+                <span>0</span>
+            </div>
+            <div class="kpm">
+                <label>avg kpm</label>
+                <span>0</span>
+            </div>
+        </div>
+
+        <div id="teamB">
+            <h2>teamB</h2>
+            <div class="totalKeys">
+                <label>Total Keys</label>
+                <span>0</span>
+            </div>
+            <div class="ckpm">
+                <label>current kpm</label>
+                <span>0</span>
+            </div>
+            <div class="kpm">
+                <label>avg kpm</label>
+                <span>0</span>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chacker.js"></script>
+    <script>
+        $(function () {
+            //
+            let game = new chacker();
+            game.start({
+                name: "test",
+                team: "A"
+            });
+        });
+    </script>
+
+</body>
+
+</html>
